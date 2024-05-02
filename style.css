@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    height: 98vh;
+}
+
+h1 {
+    font-weight: 600;
+    padding-bottom: 2vh;
+}
+
+#buttonModal {
+    font-size: 1.2rem;
+    border-radius: 15px;
+    padding: 10px;    
+}
+
+.cardContainer {
+    padding: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2vw;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 15px;
+
+}
