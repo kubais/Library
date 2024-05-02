@@ -6,7 +6,7 @@ const modal = document.querySelector('dialog');
 const txtTitle = document.querySelector('#title');
 const txtAuthor = document.querySelector('#author');
 const txtPages = document.querySelector('#pages');
-const cards = document.querySelector('.card');
+const cards = document.querySelectorAll('.card');
 
 const myLibrary = [];
 
@@ -59,9 +59,9 @@ function showBooks() {
         details.setAttribute('class', 'details');
 
         if (book.status == 'read') {
-            details.innerHTML = `<p>${book.pages} pages</p> <p class = "read>${book.status}`
+            details.innerHTML = `<p>${book.pages} pages</p> <p class = "read">${book.status}`
         } else {
-            details.innerHTML = `<p>${book.pages} pages</p> <p class = "notRead>${book.status}`
+            details.innerHTML = `<p>${book.pages} pages</p> <p class = "notRead">${book.status}`
         }
 
         card.appendChild(details);
@@ -69,8 +69,31 @@ function showBooks() {
         const indexPara = document.createElement('p');
         indexPara.setAttribute('class', 'index');
         indexPara.setAttribute('style', 'color:transparent');
+        indexPara.innerText = index;
 
-    })
+        card.appendChild(indexPara);
+
+        const btnDelete = document.createElement('button');
+        btnDelete.setAttribute('class', 'btnDelete');
+        btnDelete.innerText = 'delete';
+
+        card.appendChild(btnDelete);
+
+        container.appendChild(card);
+
+        btnDelete.addEventListener('click', () => {
+            myLibrary.splice(index, 1);
+            container.innerHTML = '';
+            showBooks();
+        })
+    })    
+}
+
+if(myLibrary.length<1) {
+    container.innerHTML = 'There are no books in the library'
+}
+else {
+    showBooks();
 }
 
 
