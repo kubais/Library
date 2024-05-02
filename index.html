@@ -8,6 +8,39 @@
     
 </head>
 <body>
+    <h1>Library</h1>
+    <button id="buttonModal">Add new book</button>
+    <div class="cardContainer">
+        
+    </div>
+
+    <dialog>
+        <span id="btnClose">close</span>
+        <h2>Add new book</h2>
+        <form action="" id="form" method="dialog">
+            <label for="title">Title
+                <input type="text" id="title" required>
+            </label>
+            <label for="author">Author
+                <input type="text" id="author" required>
+            </label>
+            <label for="pages">Number of pages
+                <input type="text" id="pages" required>
+            </label>
+            <div>
+                <p>Status of the book</p>
+                <label for="Read">
+                    <input type="radio" name="status" id="Read" value="Read">Read
+                </label>
+                <label for="NotRead">
+                    <input type="radio" name="status" id="NotRead" value="Not Read">Not Read
+                </label>
+            </div>
+        </form>
+        <button form="form" id="btnAdd">Save</button>
+    </dialog>
+    
+    
     
     <script src="script.js"></script>
 </body>
