@@ -68,8 +68,7 @@ function showBooks() {
 
         const indexPara = document.createElement('p');
         indexPara.setAttribute('class', 'index');
-        indexPara.setAttribute('style', 'color:transparent');
-        indexPara.innerText = index;
+        indexPara.innerText = `book number: ${index + 1}`;
 
         card.appendChild(indexPara);
 

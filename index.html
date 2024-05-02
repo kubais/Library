@@ -15,26 +15,33 @@
     </div>
 
     <dialog>
-        <span id="btnClose">close</span>
+        <span id="btnClose">x</span>
         <h2>Add new book</h2>
         <form action="" id="form" method="dialog">
-            <label for="title">Title
+            <div class="form-title">
+                <label for="title">Title</label>
                 <input type="text" id="title" required>
-            </label>
-            <label for="author">Author
+            </div>
+            <div class="form-author">
+                <label for="author">Author</label>
                 <input type="text" id="author" required>
-            </label>
-            <label for="pages">Number of pages
+            </div>
+            <div class="form-pages">
+                <label for="pages">Number of pages</label>
                 <input type="text" id="pages" required>
-            </label>
-            <div>
+            </div>
+            <div class="form-status">
                 <p>Status of the book</p>
-                <label for="Read">
-                    <input type="radio" name="status" id="Read" value="Read">Read
-                </label>
-                <label for="NotRead">
-                    <input type="radio" name="status" id="NotRead" value="Not Read">Not Read
-                </label>
+                <div id="status">
+                    <div>
+                        <label for="Read"></label>
+                        <input type="radio" name="status" id="Read" value="Read">Read
+                    </div>
+                    <div>
+                        <label for="NotRead"></label>
+                        <input type="radio" name="status" id="NotRead" value="Not Read">Not Read
+                    </div>
+                </div>
             </div>
         </form>
         <button form="form" id="btnAdd">Save</button>
