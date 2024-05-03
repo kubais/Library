@@ -72,6 +72,24 @@ function showBooks() {
 
         card.appendChild(indexPara);
 
+        const btnChangeStatus = document.createElement('button');
+        btnChangeStatus.setAttribute('class', 'btnChangeStatus');
+        btnChangeStatus.innerText = 'change status';
+
+        card.appendChild(btnChangeStatus);
+
+        btnChangeStatus.addEventListener('click', () => {
+            if (myLibrary[index].status === 'Read') {
+                myLibrary[index].status = 'Not Read'
+            }
+            else {
+                myLibrary[index].status = 'Read'
+             }
+
+             container.innerHTML = '';
+             showBooks();
+        })
+
         const btnDelete = document.createElement('button');
         btnDelete.setAttribute('class', 'btnDelete');
         btnDelete.innerText = 'delete';

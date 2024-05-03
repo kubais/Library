@@ -15,6 +15,10 @@ h1 {
     border-radius: 15px;
     padding: 10px;    
 }
+#buttonModal:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
 
 .cardContainer {
     padding: 5vh;
@@ -27,7 +31,10 @@ h1 {
     border: 1px solid black;
     border-radius: 15px;
     padding: 15px;
+}
 
+.card:hover {
+    box-shadow: 10px 10px 7px -7px rgba(194,194,194,1);
 }
 
 dialog {
@@ -37,6 +44,12 @@ dialog {
 #btnClose {
     text-align: right;
 }
+
+#btnClose:hover {
+    font-weight: 700;
+    cursor: pointer;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -58,6 +71,7 @@ form {
     justify-content: flex-start;
     margin: 0;
     padding: 0;
+    padding-bottom: 30px;
 }
 
 .form-status div {
@@ -65,6 +79,7 @@ form {
     flex-direction: row;
     width: 70%;
     align-items: center;
+    justify-content: ;
     margin-top: 0;
 }
 
@@ -95,4 +110,24 @@ input:hover {
 
 *:focus {
     outline: none;
+}
+
+#btnAdd {
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    border-radius: 15px;
+}
+
+#btnAdd:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btnChangeStatus {
+    margin: 2vw;
+    
+}
+
+.btnDelete {
+    margin: 2vw;
 }
